@@ -254,7 +254,7 @@ body{
     flex-direction: column;
     justify-content: center;
     background: url("assets/b17.jpg");
-    min-width: 700px;
+    min-width: 600px;
     height: 50vh;
     background-size: cover;
     background-position: center;
