@@ -1,0 +1,469 @@
+/*
+primary color: Use as the main color for logos, buttons, and headers.
+secondary color: Apply to highlights, call-to-action buttons, or icons to attract attention.
+accent color: Use sparingly for accents, links, and other small elements to convey positivity and growth.
+neutral color: Utilize as a background color for sections and layouts to maintain a clean appearance. */
+:root{
+    /* can visit color hunt for color palette. 60-30-10 rule*/
+    --primaryColor: #dd5269; /* button, links, headlines */  
+    --secondaryColor: #536da2; /* subheadig, secondary buttons, less important call to action */
+    --accentColor: #507687; /*highlights*/
+    --neutralColor:#FCFAEE; /* background */
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: #000;
+    font-family:'Spartan', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    background-color: var(--neutralColor);
+}
+
+#logo img{
+    width: 45px;
+    /* mix-blend-mode: multiply; */
+}
+#navbar{
+    position: sticky;
+    top:0;
+    width: 100vw;
+    background-color: var(--neutralColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 40px;
+    box-shadow:0 1px 10px var(--primaryColor);
+    z-index: 2;
+}
+#navbarTabs{
+    display:flex;
+    list-style-type: none; /* removes dot of list items */
+    justify-content: space-between;
+}
+#navbarTabs .tabs{
+    padding: 0 20px;
+    position: relative;
+}
+#navbarTabs .tabs a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:var(--secondaryColor);
+    font-size: 1rem;
+    font-weight: 600;
+}
+#navbarTabs .tabs i{
+    color: var(--primaryColor);
+    font-size: 1.3rem;
+}
+#navbarTabs .tabs i:hover{
+    color: var(--primaryColor);
+}
+#navbarTabs .tabs a:hover,
+#navbarTabs .tabs a.active{
+    color: var(--primaryColor);
+    transition: all 0.2s ease;
+}
+
+.tabs .active::after, .tabs a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--primaryColor);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*hero section */
+#heroSection{
+    background-image:url("assets/hero4.png");
+    background-size:100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 93vh;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#heroSection button{
+    color: var(--primaryColor);
+    background-image:url("assets/button.png");
+    border: 0;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px 60px 20px 40px;
+    background-repeat: no-repeat;
+}
+#heroSection h4{
+    font-size: 40px;
+}
+#heroSection h2{
+    font-size: 80px;
+    margin:10px 0;
+}
+#heroSection h1{
+    font-size:95px;
+    margin: 10px 0;
+}
+#heroSection button:hover{
+    cursor: pointer;
+}
+
+/* features */
+#features{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#features .feature{
+    border: 2px solid var(--accentColor);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px var(--accentColor);
+    padding: 15px 25px;
+    transition: transform 0.2s ease;
+}
+#features .feature:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    box-shadow: 4px 4px 8px var(--secondaryColor);
+}
+#features .feature h6{
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #89D8E1;
+    border-radius: 20px;
+    padding: 4px 0;
+    margin-top:10px;
+}
+
+#features .feature:nth-child(2) h6{
+    background-color: #E189BC;
+}
+#features .feature:nth-child(3) h6{
+    background-color:#758949;
+}
+#features .feature:nth-child(4) h6{
+    background-color:#89BEE0;
+}
+#features .feature:nth-child(5) h6{
+    background-color:#A28FDA;
+}
+#features .feature:nth-child(6) h6{
+    background-color: #E2A889;
+}
+
+#product-container{
+    text-align: center;
+}
+.product-all-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+#product-container .product-card{
+    width: 23%;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    text-align: start;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    transition: all 0.5s ease;
+}
+#product-container .product-card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
+}
+#product-container .product-card h5{
+    font-size: 17px;
+    color: var(--primaryColor)
+}
+#product-container .product-card .star i{
+    color: goldenrod;
+    font-size: 15px;
+}
+#product-container .product-card img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product-container .product-card h4 strike{
+    color: #000000aa;
+}
+#product-container .product-card .cart-icon{
+    width: 40px;
+    height: 40px;
+    color: var(--secondaryColor);
+    background-color: #c6e0d6af;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 43px;
+}
+#banner{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/b2.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner h4, #banner h2{
+    color:#fff;
+    padding: 10px 10px;
+}
+#banner span{
+    color:var(--primaryColor)
+}
+#banner button:hover{
+    background-color: var(--accentColor);
+    color: #fff;
+}
+
+#small-banner, #extra-small-banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#small-banner .banner-box{
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("assets/b17.jpg");
+    min-width: 700px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    transition: all 0.3s;
+}
+#small-banner .banner-box:nth-child(2){
+    background: url("assets/b10.jpg");
+    background-size: cover;
+}
+#small-banner h4{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+}
+#small-banner h2{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+}
+#small-banner span{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#small-banner .banner-box button{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color:#fff;
+    transition: all 0.3s;
+}
+#small-banner .banner-box:hover{
+    button{
+        background-color: var(--secondaryColor);
+        transform: scale(1.04);
+    }
+}
+
+#extra-small-banner .banner-box{
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("assets/b17.jpg");
+    min-width: 400px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    transition: all 0.3s;
+}
+#extra-small-banner .banner-box h2{
+    font-size: 2rem;
+    color: var(--primaryColor);
+}
+#extra-small-banner .banner-box h3{
+    font-size: 1rem;
+    color: var(--neutralColor)
+}
+#extra-small-banner .banner-box:nth-child(1){
+    background-image:url("assets/b7.jpg")
+}
+#extra-small-banner .banner-box:nth-child(2){
+    background-image:url("assets/b4.jpg")
+}
+#extra-small-banner .banner-box:nth-child(3){
+    background-image:url("assets/b18.jpg")
+}
+
+#newsletter{
+    background: url("assets/polygonal19.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#newsletter h4{
+    color:#fff;
+    font-size:1.5rem;
+}
+#newsletter p{
+    color:#465b52;
+    font-size: 1.3rem;
+}
+#newsletter p span{
+    color:goldenrod;
+}
+#newsletter .form input{
+    width: 300px;
+    height: 45px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1rem;
+    color: var(--secondaryColor);
+    margin-right: 0;
+}
+#newsletter button{
+    background-color: var(--secondaryColor);
+    color: #fff;
+    margin-left: 0;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+footer .footer-column{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 22%;
+}
+footer .footer-column p{
+    font-size: 1.1rem;
+}
+#footer-column-1 img{
+    width: 60px;  
+}
+.footer-column a, h4{
+    line-height: 2.5rem;
+}
+#footer-column-1 #social-media #social-media-icons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+#footer-column-1 #social-media #social-media-icons i{
+    color: var(--primaryColor);
+    padding-right:8px;
+    transition: all 0.2s ease;
+}
+#footer-column-1 #social-media #social-media-icons i:hover{
+    color: var(--secondaryColor);
+    transform: scale(1.1);
+}
+#footer-column-4 #install-app-sources {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#footer-column-4 #install-app-sources a{
+    padding-right: 10px;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 2px;
+    margin-right: 4px;
+    height: 50px;
+    width: 173px;
+}
+.copyright{
+    text-align: center;
+    color:var(--accentColor);
+    font-size:1rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--primaryColor);
+}
+
+h2{
+    font-size:46px;
+    line-height: 54px;
+    color: var(--secondaryColor);
+}
+h4{
+    font-size:20px;
+    color: var(--accentColor);
+}
+h6{
+    font-weight: 700;
+    font-size:12px;
+}
+p{
+    font-size: 2rem;
+    color: #465b52;
+    margin: 15px 0 20px 0; /* when 0px then just write 0 */
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+button.normal{
+    font-size:14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
