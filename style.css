@@ -245,7 +245,7 @@ body{
 
 #small-banner, #extra-small-banner{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 #small-banner .banner-box{
@@ -254,7 +254,7 @@ body{
     flex-direction: column;
     justify-content: center;
     background: url("assets/b17.jpg");
-    max-width: 600px;
+    min-width: 700px;
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -461,9 +461,4 @@ button.normal{
     border: none;
     outline: none;
     transition: 0.2s;
-}
-
-
-@media(max-widht: 477px){
-
 }
