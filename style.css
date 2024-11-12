@@ -245,7 +245,7 @@ body{
 
 #small-banner, #extra-small-banner{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
 }
 #small-banner .banner-box{
@@ -418,11 +418,6 @@ footer .footer-column p{
 }
 
 
-
-
-
-
-
 h1{
     font-size: 50px;
     line-height: 64px;
@@ -466,4 +461,9 @@ button.normal{
     border: none;
     outline: none;
     transition: 0.2s;
+}
+
+
+@media(max-widht: 477px){
+
 }
