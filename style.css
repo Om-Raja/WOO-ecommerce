@@ -493,3 +493,54 @@ button.normal{
 #pagination a i{
     color: #fff;
 }
+ /*single product details */
+
+.small-image-group .small-image img{
+    width: 100%;
+}
+.small-image-group .small-image{
+    margin: 8px;
+    cursor: pointer;
+}
+#product-details .single-product-image{
+     width: 40%;
+     margin-right: 50px;
+}
+.small-image-group{
+    display: flex;
+}
+
+#product-details{
+    display: flex;
+    justify-content: space-around;
+}
+#single-product-details{
+    width: 50%;
+    padding-top: 40px;
+}
+#single-product-details h4{
+    font-size: 1.5rem;
+}
+#single-product-details button{
+    background-color: var(--secondaryColor);
+    color: #fff;
+    margin-left: 0;
+}
+#single-product-details select{
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+}
+#single-product-details input{
+    width: 50px;
+    height: 45px;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+#single-product-details button + h4{
+    margin: 20px 0 8px 0;
+}
+#single-product-details span{
+    line-height: 25px;
+}

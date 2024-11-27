@@ -1,12 +1,15 @@
-const closeBtn = document.querySelector("#close-btn");
-const navbarTabs = document.querySelector("#navbarTabs");
-const openBtn = document.querySelector("#open-btn");
+var mainImg = document.getElementById("mainImg");
+var smallImages = document.querySelectorAll(".small-image img");
 
-closeBtn.addEventListener("click", ()=>{
-    navbarTabs.classList.remove("active");
-    navbarTabs.classList.add("inactive");
+smallImages[0].addEventListener("click", ()=>{
+    mainImg.src = smallImages[0].src;
 });
-
-openBtn.addEventListener("click", ()=>{
-    navbarTabs.classList.add("active");
-})
+smallImages[1].addEventListener("click", ()=>{
+    mainImg.src = smallImages[1].src;
+});
+smallImages[2].addEventListener("click", ()=>{
+    mainImg.src = smallImages[2].src;
+});
+smallImages[3].addEventListener("click", ()=>{
+    mainImg.src = smallImages[3].src;
+});
